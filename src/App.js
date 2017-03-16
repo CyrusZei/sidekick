@@ -5,22 +5,17 @@ import './App.scss';
 class App extends Component {
   render() {
     return (
-      <div className='container'>
-        <div className='row'>
-          <div className='block _10'>
-            <div className='row'>
-              <div className='block _100'>
-                <p>meny</p>
-              </div>
-              <div className='block _100'>
-                <p>spark</p>
-              </div>
-            </div>
-          </div>
-          <div className='block _90'>
-            <h3>it works</h3>
-          </div>
+      <div className='body_container'>
+        <div className='meny'>
+          <p>meny</p>
         </div>
+        <div className='user_meny'>
+          <p>User meny</p>
+        </div>
+        <div className='body_content'>
+          <p>content</p>
+        </div>
+
       </div>
 
     );
