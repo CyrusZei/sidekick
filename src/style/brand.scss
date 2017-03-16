@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
 body {
   background-color: #282F37;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
 }
 
 .meny {
@@ -23,7 +27,7 @@ body {
 .user_meny {
   margin-left: 100px;
   height: 50px;
-  background-color: #FF0000;
+  background-color: #D0021B;
   width: 100%;
   top: 0px;
   position: fixed;
