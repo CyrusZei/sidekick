@@ -9,9 +9,6 @@ class App extends Component {
         <div className='meny'>
           <p>meny</p>
         </div>
-        <div className='user_meny'>
-          <p>User meny</p>
-        </div>
         <div className='body_content'>
           <p>content</p>
         </div>

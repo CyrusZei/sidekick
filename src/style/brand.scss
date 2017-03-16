@@ -6,28 +6,17 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.meny {
-  background-color: #1D232A;
-  width: 100px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  color: #FFFFFF;
-  text-align: center;
-}
+
 
 .body_content {
-    margin-left: 100px;
-    margin-top: 50px;
+    margin-top: 80px;
     height: 100%;
     top: 0px;
     bottom: 0px;
 }
-.user_meny {
-  margin-left: 100px;
-  height: 50px;
-  background-color: #D0021B;
+.meny {
+  height: 80px;
+  background-color: #1D232A;
   width: 100%;
   top: 0px;
   position: fixed;
