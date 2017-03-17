@@ -22,12 +22,34 @@ body {
   position: fixed;
 
   .active {
-
+    box-shadow: inset 0 1px 6px 0 rgba(0,0,0,0.50);
   }
+  .color_red {
+    background-color: #FF0000;
+  }
+  .color_green {
+    background-color: #7ED321;
+  }
+  .color_purple {
+    background-color: #BD0FE1;
+  }
+  .color_blue {
+    background-color: #4990E2;
+  }
+  .color_orange {
+    background-color: #F6A623;
+  }
+
+
+
   .meny_link {
-    margin: 0px 10px;
+
     text-decoration: none;
     color: #FFFFFF;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    padding: 0px 10px;
   }
 
 
