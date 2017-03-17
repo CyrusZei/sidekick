@@ -13,10 +13,16 @@
 }
 
 .block {
-  padding: 15px;
+
   // border: 1px solid #666;
-  margin: 5px 0;
+
   flex-basis: 100%;
+}
+.padding_15 {
+    padding: 15px;
+}
+.margin_5 {
+    margin: 5px 0;
 }
 
 .row {

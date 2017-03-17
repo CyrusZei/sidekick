@@ -5,6 +5,7 @@ import App from './App';
 import About from './sidekick/about';
 import Contact from './sidekick/contact';
 import Main from './sidekick/main';
+import Information from './sidekick/features/information/information';
 
 import './index.css';
 
@@ -15,6 +16,7 @@ ReactDOM.render(
       <IndexRoute component={Main}/>
       <Route path='contact' component={Contact}/>
       <Route path='about' component={About}/>
+      <Route path='information' component={Information} />
     </Route>
   </Router>,
   document.getElementById('root')
