@@ -9,9 +9,9 @@ import Information from './sidekick/features/information/information';
 
 import './index.css';
 
-import {Route, Router, IndexRoute, hashHistory} from 'react-router';
+import {Route, Router, IndexRoute, browserHistory} from 'react-router';
 ReactDOM.render(
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Main}/>
       <Route path='contact' component={Contact}/>
