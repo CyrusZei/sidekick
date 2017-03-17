@@ -1,5 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import * as firebase from 'firebase';
+
+var config = {
+    apiKey: "AIzaSyDYOvmVK0dsLyExx3QRIzNg026hpsvZtfI",
+    authDomain: "sidekick-ca8b2.firebaseapp.com",
+    databaseURL: "https://sidekick-ca8b2.firebaseio.com",
+    storageBucket: "sidekick-ca8b2.appspot.com",
+    messagingSenderId: "807670348038"
+  };
+  firebase.initializeApp(config);
+
+  var firebaseRef = firebase.database().ref();
+
+  firebaseRef.set({
+    app : {
+      name: "Side.kick",
+      version: 1
+    },
+    isRunning : true,
+    user: {
+      name: "Cyrus",
+      age: 32
+    }
+  });
+
+
+
 
 import App from './App';
 import About from './sidekick/about';
