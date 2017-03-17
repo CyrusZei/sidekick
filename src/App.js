@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Nav from './sidekick/nav';
 import './App.scss';
 
 class App extends Component {
   render() {
     return (
       <div className='body_container'>
-        <div className='meny'>
-          <p>meny</p>
-        </div>
+        <Nav/>
         <div className='body_content'>
-          <p>content</p>
+          {this.props.children}
         </div>
 
       </div>
