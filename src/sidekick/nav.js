@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './../style/brand.scss';
-import { Link, IndexLink } from 'react-router';
+import { Link, IndexLink, browserHistory } from 'react-router';
 import * as firebase from 'firebase';
 
 class Nav extends Component {
@@ -15,7 +15,7 @@ class Nav extends Component {
     e.preventDefault();
     firebase.auth().signOut();
     console.log('user logged out');
-
+    browserHistory.push('/login');
 
   }
 
@@ -46,7 +46,7 @@ class Nav extends Component {
             </div>
             <div className='block _10 meny_height'>
               {this.state.userIsLoggedIn ?  <p>User logged in  </p> : <p>You need to login in</p>}
-              <button onClick={this.handleLogout}>Logga ut</button>
+              <IndexLink to='/' onClick={this.handleLogout}>Logga ut</IndexLink>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
-
+import {browserHistory} from 'react-router';
 class Login extends Component {
   handleLogin = (e) => {
     e.preventDefault();
@@ -16,8 +16,8 @@ class Login extends Component {
     }).then(function(currentUser){
       console.log('user uid : ',currentUser.uid);
     });
+    browserHistory.push('/');
 
-  
 
   }
 
