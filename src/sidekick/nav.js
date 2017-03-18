@@ -45,7 +45,7 @@ class Nav extends Component {
               <IndexLink to='/information' className='meny_link' activeClassName='active color_blue'>Information</IndexLink>
             </div>
             <div className='block _10 meny_height'>
-              {this.state.userIsLoggedIn ?  <p>User logged in</p> : <p>You need to login in</p>}
+              {this.state.userIsLoggedIn ?  <p>User logged in  </p> : <p>You need to login in</p>}
               <button onClick={this.handleLogout}>Logga ut</button>
             </div>
           </div>
