@@ -35,7 +35,7 @@ import Main from './sidekick/main';
 import Information from './sidekick/features/information/information';
 import Login from './login/login';
 import Register from './register/register';
-
+import Profile from './sidekick/features/profile/profile';
 import './index.css';
 
 import {Route, Router, IndexRoute, browserHistory} from 'react-router';
@@ -48,6 +48,7 @@ ReactDOM.render(
       <Route path='information' component={Information} />
       <Route path='register' component={Register}/>
       <Route path='login' component={Login}/>
+      <Route path='profile' component={Profile}/>
     </Route>
   </Router>,
   document.getElementById('root')
