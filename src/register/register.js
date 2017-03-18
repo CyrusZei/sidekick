@@ -6,14 +6,20 @@ class Register extends Component {
     e.preventDefault();
     var email = this.refs.email.value;
     var password = this.refs.password.value;
+
     console.log('user : ', email);
     console.log('password : ', password);
+
+    this.refs.email.value = '';
+    this.refs.password.value = '';
 
     firebase.auth().createUserWithEmailAndPassword(email,password)
     .catch(function(error) {
       console.log('error : ', error);
+    }).then(function(data) {
+      console.log(data);
+      
     });
-
 
   }
 
