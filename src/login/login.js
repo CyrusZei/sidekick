@@ -1,10 +1,32 @@
 import React, { Component } from 'react';
+import * as firebase from 'firebase';
 
 class Login extends Component {
+  handleLogin = (e) => {
+    e.preventDefault();
+    var email = this.refs.email.value;
+    var password = this.refs.password.value;
+
+    this.refs.email.value = '';
+    this.refs.password.value = '';
+
+    firebase.auth().signInWithEmailAndPassword(email,password)
+    .catch(function(error) {
+      console.log('Error : ', error);
+    }).then(function(currentUser){
+      console.log('user uid : ',currentUser.uid);
+    });
+
+  }
+
   render() {
     return(
       <div>
-        <h2>login</h2>
+        <form onSubmit={this.handleLogin}>
+          <input type='text' ref='email'/>
+          <input type='password' ref='password'/>
+          <button>Logga in</button>
+        </form>
       </div>
     )
 

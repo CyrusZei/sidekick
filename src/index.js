@@ -47,6 +47,7 @@ ReactDOM.render(
       <Route path='about' component={About}/>
       <Route path='information' component={Information} />
       <Route path='register' component={Register}/>
+      <Route path='login' component={Login}/>
     </Route>
   </Router>,
   document.getElementById('root')
