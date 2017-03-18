@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import {browserHistory} from 'react-router';
+
 class Login extends Component {
   handleLogin = (e) => {
     e.preventDefault();
