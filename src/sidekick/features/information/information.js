@@ -12,6 +12,12 @@ class Information extends Component {
   }
 
   componentDidMount() {
+    var user = firebase.auth().currentUser
+    console.log(user.uid);
+
+    
+
+
     this.setState({
       speed: 25
     });
@@ -20,7 +26,7 @@ class Information extends Component {
   render() {
     return (
       <div>
-        {this.state.speed}
+
 
       </div>
     )

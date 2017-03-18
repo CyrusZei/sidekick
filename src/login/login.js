@@ -17,6 +17,8 @@ class Login extends Component {
       console.log('user uid : ',currentUser.uid);
     });
 
+  
+
   }
 
   render() {
