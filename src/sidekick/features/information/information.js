@@ -21,6 +21,7 @@ class Information extends Component {
     return (
       <div>
         {this.state.speed}
+
       </div>
     )
   }
