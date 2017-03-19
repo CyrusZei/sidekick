@@ -33,6 +33,7 @@ class Profile extends Component {
 
       } else
        console.log('user is not logged in :', user.uid);
+
     }.bind(this));
   }
 
