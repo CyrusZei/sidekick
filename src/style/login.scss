@@ -1,14 +1,54 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
 .login_body {
-
-
   .login_form {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 150px;
+    width: 180px;
     align-content: center;
-    background-color: #FFFFFF;
     padding: 60px;
     margin-top: 150px;
+    /* Rectangle 3: */
+    background-image: linear-gradient(-180deg, #282F37 0%, #1F242A 99%);
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.50);
+
+    input {
+      width: 100%;
+      border: none;
+      padding: 5px 0;
+      margin-bottom: 15px;
+      border-radius: 3px;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 5px;
+      /* Rectangle 5 Copy 2: */
+      background: #D0021B;
+      border-radius: 3px;
+      border: none;
+      color: #fff;
+    }
+
+    .logo_side {
+      color: #4990E2;
+      font-size: 40px;
+      font-weight: 100;
+    }
+
+    .logo_dot {
+      color: #F6A623;
+      font-size: 40px;
+      font-weight: 100;
+    }
+
+    .logo_kick {
+      color: #D0011B;
+      font-size: 40px;
+      font-weight: 100;
+    }
+    /* Side.Kick: */
   }
 }

@@ -26,11 +26,13 @@ class Login extends Component {
     return(
       <div className='login_body'>
         <div className='login_form'>
+          <h3><span className='logo_side'>Side</span><span className='logo_dot'>.</span><span className='logo_kick'>Kick</span></h3>
           <form onSubmit={this.handleLogin}>
-            <input type='text' ref='email'/>
-            <input type='password' ref='password'/>
+            <input type='text' ref='email' placeholder='E-mail'/>
+            <input type='password' ref='password' placeholder='Password'/>
             <button>Logga in</button>
           </form>
+          <div className='register_forgot'><span className='register'>Registrera</span><span className='forgot'>Glömt lösenord ?</span></div>
         </div>
       </div>
     )
