@@ -12,7 +12,22 @@
     /* Rectangle 3: */
     background-image: linear-gradient(-180deg, #282F37 0%, #1F242A 99%);
     box-shadow: 0 0 2px 0 rgba(0,0,0,0.50);
-
+    .register_forgot {
+      margin-top: 10px;
+      .register {
+        font-size: 10px;
+        font-weight: 100;
+        text-align: left;
+        display: block;
+      }
+      .forgot {
+        font-size: 10px;
+        text-align: right;
+        font-weight: 100;
+        display: block;
+        margin-top: -12px;
+      }
+    }
     input {
       width: 100%;
       border: none;
