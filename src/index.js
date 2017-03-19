@@ -35,6 +35,7 @@ import Main from './sidekick/main';
 import Information from './sidekick/features/information/information';
 import Login from './login/login';
 import Register from './register/register';
+import Forgot from './forgot/forgot';
 import Profile from './sidekick/features/profile/profile';
 import './index.css';
 
@@ -48,6 +49,7 @@ ReactDOM.render(
       <Route path='information' component={Information} />
       <Route path='register' component={Register}/>
       <Route path='login' component={Login}/>
+      <Route path='forgot' component={Forgot}/>
       <Route path='profile' component={Profile}/>
     </Route>
   </Router>,

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
-import {browserHistory} from 'react-router';
+import {Link ,browserHistory} from 'react-router';
 
 class Login extends Component {
   handleLogin = (e) => {
@@ -32,7 +32,7 @@ class Login extends Component {
             <input type='password' ref='password' placeholder='Password'/>
             <button>Logga in</button>
           </form>
-          <div className='register_forgot'><span className='register'>Registrera</span><span className='forgot'>Glömt lösenord ?</span></div>
+          <div className='register_forgot'><span className='register'><Link to='/register'>Registrera</Link></span><span className='forgot'><Link to='/forgot'>Glömt lösenord ?</Link></span></div>
         </div>
       </div>
     )

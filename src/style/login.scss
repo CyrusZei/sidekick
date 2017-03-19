@@ -15,17 +15,17 @@
     .register_forgot {
       margin-top: 10px;
       .register {
-        font-size: 10px;
+        font-size: 11px;
         font-weight: 100;
         text-align: left;
         display: block;
       }
       .forgot {
-        font-size: 10px;
+        font-size: 11px;
         text-align: right;
         font-weight: 100;
         display: block;
-        margin-top: -12px;
+        margin-top: -13px;
       }
     }
     input {
@@ -36,6 +36,13 @@
       border-radius: 3px;
       text-align: center;
     }
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #D0021B;
+    }
 
     button {
       width: 100%;
@@ -45,6 +52,10 @@
       border-radius: 3px;
       border: none;
       color: #fff;
+    }
+    button:hover {
+      background-color: #9F0719;
+      cursor: pointer;
     }
 
     .logo_side {
