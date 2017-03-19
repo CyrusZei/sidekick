@@ -20,7 +20,7 @@ class Main extends Component {
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log('user is logged in contact : ', user.uid, user.email);
-        console.log('user',user);
+        console.log('user :' ,user);
 
 
         this.setState({

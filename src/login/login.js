@@ -24,12 +24,14 @@ class Login extends Component {
 
   render() {
     return(
-      <div>
-        <form onSubmit={this.handleLogin}>
-          <input type='text' ref='email'/>
-          <input type='password' ref='password'/>
-          <button>Logga in</button>
-        </form>
+      <div className='login_body'>
+        <div className='login_form'>
+          <form onSubmit={this.handleLogin}>
+            <input type='text' ref='email'/>
+            <input type='password' ref='password'/>
+            <button>Logga in</button>
+          </form>
+        </div>
       </div>
     )
 
