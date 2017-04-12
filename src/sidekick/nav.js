@@ -31,27 +31,51 @@ class Nav extends Component {
 
 
   render() {
-    return (
-      <div className='meny meny_height'>
-        <div className='container meny_height'>
-          <div className='row meny_height'>
-            <div className='block _10 meny_height'>
-              <p>Side.Kick</p>
-            </div>
-            <div className='block _80 meny_height'>
-              <IndexLink to='/' className='meny_link' activeClassName='active color_red'>Start</IndexLink>
-              <IndexLink to='/about' className='meny_link'  activeClassName='active color_green'>Om oss</IndexLink>
-              <IndexLink to='/contact' className='meny_link' activeClassName='active color_purple'>Kontakta</IndexLink>
-              <IndexLink to='/information' className='meny_link' activeClassName='active color_blue'>Information</IndexLink>
-            </div>
-            <div className='block _10 meny_height'>
-              {this.state.userIsLoggedIn ?  <p><IndexLink to='/profile'>Profil</IndexLink>User logged in  <IndexLink to='/' onClick={this.handleLogout}>Logga ut</IndexLink></p> : <p>You need to login in</p>}
 
+
+    if (this.state.userIsLoggedIn) {
+      return (
+        <div className='meny meny_height'>
+          <div className='container meny_height'>
+            <div className='row meny_height'>
+              <div className='block _10 meny_height'>
+                <p>Side.Kick</p>
+              </div>
+              <div className='block _80 meny_height'>
+                <IndexLink to='/' className='meny_link' activeClassName='active color_red'>Start</IndexLink>
+                <IndexLink to='/about' className='meny_link'  activeClassName='active color_green'>Om oss</IndexLink>
+                <IndexLink to='/contact' className='meny_link' activeClassName='active color_purple'>Kontakta</IndexLink>
+                <IndexLink to='/information' className='meny_link' activeClassName='active color_blue'>Information</IndexLink>
+              </div>
+              <div className='block _10 meny_height'>
+                 <p><IndexLink to='/profile'>Profil</IndexLink>User logged in  <IndexLink to='/' onClick={this.handleLogout}>Logga ut</IndexLink></p>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    );
+      )
+
+    } else {
+      return (
+        <div className='meny meny_height'>
+          <div className='container meny_height'>
+            <div className='row meny_height'>
+              <div className='block _10 meny_height'>
+                <p>Side.Kick</p>
+              </div>
+
+              <div className='block _10 meny_height'>
+                 <p>You need to <IndexLink to='/login'>login in</IndexLink></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+
   }
 }
 
