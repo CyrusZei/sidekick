@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
-
+import { Link, IndexLink, browserHistory } from 'react-router';
 class About extends Component {
 
   constructor() {
@@ -16,7 +16,7 @@ class About extends Component {
 
 
   componentWillMount() {
-
+    //Auth firebase
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         console.log('user is logged in contact : ', user.uid, user.email);
@@ -32,17 +32,21 @@ class About extends Component {
         });
 
 
-      } else
+      } else {
        console.log('user is not logged in :', user.uid);
+       browserHistory.push('/login');
+       console.log("Testing ab");
 
-    }.bind(this));
-  }
+      }
+
+  }.bind(this));
+}
+
 
 
   render() {
     return (
-      <div>About
-      </div>
+      <div>About</div>
     )
   }
 }
