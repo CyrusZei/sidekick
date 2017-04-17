@@ -34,7 +34,9 @@ class About extends Component {
 
       } else {
        console.log('user is not logged in :', user.uid);
-       browserHistory.push('/login');
+         browserHistory.push('/login');
+
+
        console.log("Testing ab");
 
       }
@@ -45,6 +47,7 @@ class About extends Component {
 
 
   render() {
+
     return (
       <div>About</div>
     )
