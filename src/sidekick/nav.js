@@ -22,7 +22,7 @@ class Nav extends Component {
   componentWillMount() {
     firebase.auth().onAuthStateChanged(function(user) {
       this.setState({
-        userIsLoggedIn: user ? true : false,
+        userIsLoggedIn: user ? true : false
       });
     }.bind(this));
 
