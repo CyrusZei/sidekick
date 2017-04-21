@@ -11,6 +11,7 @@ class Cloud extends Component {
   }
 
   uploadFile = (e) => {
+    var downloadURL = '';
     e.preventDefault();
     var file = this.refs.filePath.files[0];
     var storageRef = firebase.storage().ref();
@@ -30,6 +31,8 @@ class Cloud extends Component {
          break;
          case firebase.storage.TaskState.RUNNING: // or 'running'
          console.log('Upload is running');
+         downloadURL = snap.downloadURL;
+         console.log(snap.downloadURL);
          break;
        }
 
@@ -37,9 +40,7 @@ class Cloud extends Component {
      },function(error){
        console.log('some error', error);
      }, function() {
-       console.log('it works');
-       console.log('upload :',uploadTask.snap.downloadURL);
-       var downloadURL = uploadTask.snap.downloadURL;
+
        console.log('url :', downloadURL);
 
      });
@@ -55,6 +56,7 @@ class Cloud extends Component {
   render() {
     return (
       <div>
+        
         <form onSubmit={this.uploadFile}>
           <progress value='0' max='100' ref='progressUpload'>0%</progress>
           <input type='file' ref='filePath' placeholder='FilePath' />
