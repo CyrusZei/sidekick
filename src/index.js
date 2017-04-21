@@ -37,6 +37,7 @@ import Login from './login/login';
 import Register from './register/register';
 import Forgot from './forgot/forgot';
 import Profile from './sidekick/features/profile/profile';
+import Cloud from './sidekick/features/cloud/cloud'
 import './index.css';
 
 import {Route, Router, IndexRoute, browserHistory} from 'react-router';
@@ -51,6 +52,7 @@ ReactDOM.render(
       <Route path='login' component={Login}/>
       <Route path='forgot' component={Forgot}/>
       <Route path='profile' component={Profile}/>
+      <Route path='cloud' component={Cloud} />
     </Route>
   </Router>,
   document.getElementById('root')
