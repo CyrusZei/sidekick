@@ -56,7 +56,6 @@ class Cloud extends Component {
   render() {
     return (
       <div>
-        
         <form onSubmit={this.uploadFile}>
           <progress value='0' max='100' ref='progressUpload'>0%</progress>
           <input type='file' ref='filePath' placeholder='FilePath' />

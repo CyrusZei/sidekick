@@ -43,6 +43,7 @@ class Nav extends Component {
               </div>
               <div className='block _80 meny_height'>
                 <IndexLink to='/' className='meny_link' activeClassName='active color_red'>Start</IndexLink>
+                <IndexLink to='/cloud' className='meny_link' activeClassName='active color_red'>Cloud</IndexLink>
                 <IndexLink to='/about' className='meny_link'  activeClassName='active color_green'>Om oss</IndexLink>
                 <IndexLink to='/contact' className='meny_link' activeClassName='active color_purple'>Kontakta</IndexLink>
                 <IndexLink to='/information' className='meny_link' activeClassName='active color_blue'>Information</IndexLink>
