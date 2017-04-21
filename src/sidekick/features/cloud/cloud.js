@@ -19,9 +19,29 @@ class Cloud extends Component {
      var thisRef = storageRef.child(file.name);
      console.log(thisRef.put(file));
      //put request upload file to firebase storage
-     thisRef.put(file).then(function(snap){
-       console.log(snap);
-       console.log('done');
+     let uploadTask = thisRef.put(file)
+
+     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,function(snap) {
+       var progress = (snap.bytesTransferred / snap.totalBytes) * 100;
+       console.log('Upload is :' + progress + '% done');
+       switch(snap.state) {
+         case firebase.storage.TaskState.PAUSED: // or 'paused'
+         console.log('Upload is paused');
+         break;
+         case firebase.storage.TaskState.RUNNING: // or 'running'
+         console.log('Upload is running');
+         break;
+       }
+
+
+     },function(error){
+       console.log('some error', error);
+     }, function() {
+       console.log('it works');
+       console.log('upload :',uploadTask.snap.downloadURL);
+       var downloadURL = uploadTask.snap.downloadURL;
+       console.log('url :', downloadURL);
+
      });
 
   }
