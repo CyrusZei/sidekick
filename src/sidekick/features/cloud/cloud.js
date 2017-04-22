@@ -50,13 +50,13 @@ class Cloud extends Component {
        console.log('Upload is :' + progress + '% done');
        switch(snap.state) {
          case firebase.storage.TaskState.PAUSED: // or 'paused'
-         console.log('Upload is paused');
-         break;
+          console.log('Upload is paused');
+          break;
          case firebase.storage.TaskState.RUNNING: // or 'running'
-         console.log('Upload is running');
-         downloadURL = snap.downloadURL;
-         console.log(snap.downloadURL);
-         break;
+          console.log('Upload is running');
+          downloadURL = snap.downloadURL;
+          console.log(snap.downloadURL);
+          break;
        }
 
 
