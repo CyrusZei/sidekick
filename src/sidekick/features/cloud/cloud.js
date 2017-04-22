@@ -6,24 +6,47 @@ class Cloud extends Component {
   constructor() {
     super();
     this.state = {
-      user: null
+      files : {
+        name: ''
+      }
     };
   }
 
-  uploadFile = (e) => {
-    var downloadURL = '';
-    e.preventDefault();
-    var file = this.refs.filePath.files[0];
-    var storageRef = firebase.storage().ref();
 
-     //dynamically set reference to the file name
-     var thisRef = storageRef.child(file.name);
-     console.log(thisRef.put(file));
-     //put request upload file to firebase storage
-     let uploadTask = thisRef.put(file)
+
+
+  componentWillMount () {
+    const storage = firebase.storage().ref();
+
+
+
+    storage.child('files/').getDownloadURL().then(function(url) {
+      console.log('Storage url:',url);
+    });
+
+    //console.log('Storage : ',storage.getMetadata());
+
+    this.setState({
+
+    });
+  }
+
+
+  uploadFile = (e) => {
+    let downloadURL = '';
+    e.preventDefault();
+    const file = this.refs.filePath;
+
+    const storageRef = firebase.storage().ref('files/');
+
+
+     let thisRef = storageRef.child(file.files[0].name);
+     console.log(thisRef.put(file.files[0]));
+
+     let uploadTask = thisRef.put(file.files[0])
 
      uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,function(snap) {
-       var progress = (snap.bytesTransferred / snap.totalBytes) * 100;
+       let progress = (snap.bytesTransferred / snap.totalBytes) * 100;
        console.log('Upload is :' + progress + '% done');
        switch(snap.state) {
          case firebase.storage.TaskState.PAUSED: // or 'paused'
@@ -39,11 +62,12 @@ class Cloud extends Component {
 
      },function(error){
        console.log('some error', error);
-     }, function() {
+     },function() {
 
        console.log('url :', downloadURL);
-
-     });
+       console.log('all done');
+       console.log('fp:', file.value = '');
+     })
 
   }
 
