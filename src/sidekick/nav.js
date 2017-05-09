@@ -4,12 +4,6 @@ import { Link, IndexLink, browserHistory } from 'react-router';
 import * as firebase from 'firebase';
 
 class Nav extends Component {
-  constructor() {
-    super();
-    this.state = {
-      userIsLoggedIn: false
-    };
-  }
 
   handleLogout = (e) => {
     e.preventDefault();
@@ -19,21 +13,11 @@ class Nav extends Component {
 
   }
 
-  componentWillMount() {
-    firebase.auth().onAuthStateChanged(function(user) {
-      this.setState({
-        userIsLoggedIn: user ? true : false
-      });
-    }.bind(this));
-
-  }
-
 
 
   render() {
 
 
-    if (this.state.userIsLoggedIn) {
       return (
         <div className='meny meny_height'>
           <div className='container meny_height'>
@@ -56,30 +40,6 @@ class Nav extends Component {
           </div>
         </div>
       )
-
-    } else {
-
-
-
-      return (
-        <div className='meny meny_height'>
-          <div className='container meny_height'>
-            <div className='row meny_height'>
-              <div className='block _10 meny_height'>
-                <p>Side.Kick</p>
-              </div>
-
-              <div className='block _10 meny_height'>
-                 <p>You need to <IndexLink to='/login'>login in</IndexLink></p>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-    }
-
-
   }
 }
 

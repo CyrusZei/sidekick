@@ -1,16 +1,34 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import { Link, IndexLink, browserHistory } from 'react-router';
 import Nav from './sidekick/nav';
 import './App.scss';
 import * as firebase from 'firebase';
 import './style/login.scss';
+import Login from './login/login';
 
 
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      userIsLoggedIn: false
+    };
+  }
 
+  componentWillMount() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      this.setState({
+        userIsLoggedIn: user ? true : false
+      });
+    }.bind(this));
+
+  }
 
   render() {
+    if (this.state.userIsLoggedIn) {
+
     return (
       <div className='body_container'>
         <Nav/>
@@ -21,6 +39,11 @@ class App extends Component {
       </div>
 
     );
+    } else {
+      return (
+        <Login />
+      )
+    }
   }
 }
 
