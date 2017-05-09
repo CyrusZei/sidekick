@@ -15,7 +15,7 @@ class Main extends Component {
   }
 
 
-  componentWillMount() {
+  componentDidMount() {
 
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {

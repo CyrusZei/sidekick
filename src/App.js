@@ -30,7 +30,7 @@ class App extends Component {
     if (this.state.userIsLoggedIn) {
 
     return (
-      <div className='body_container'>
+      <div className='body_container' ref="check">
         <Nav/>
         <div className='body_content'>
           {this.props.children}
